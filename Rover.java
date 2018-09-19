@@ -60,6 +60,29 @@ public class Rover extends Actor
         }
     }
 
+    /** 
+     * Fahre im endlos lange im Quadrat. 
+     */
+    public void quadratTour() {
+        int x; 
+        x=1;
+        while (x <= 100) {
+        
+        move(4);
+        Greenfoot.delay(1);
+        drehe("rechts");
+        move(4);
+        Greenfoot.delay(1);
+        drehe("rechts");
+        move(4);
+        Greenfoot.delay(1);
+        drehe("rechts");
+        move(4);
+        Greenfoot.delay(1);
+        drehe("rechts");
+    }
+}
+    
     /**
      * Der Rover gibt durch einen Wahrheitswert (true oder false )zurück, ob sich auf seiner Position ein Objekt der Klasse Gestein befindet.
      * Eine entsprechende Meldung erscheint auch auf dem Display.
