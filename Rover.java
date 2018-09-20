@@ -82,6 +82,29 @@ public class Rover extends Actor
         drehe("rechts");
     }
 }
+    /**
+     * Umfahre einen Hügel, wenn vorhanden.
+     */
+    public void umfahreHügel() {   
+    
+    if(huegelVorhanden("vorne"))
+    { 
+        drehe("rechts");
+        Greenfoot.delay(1);
+        move(1);
+        Greenfoot.delay(1);
+        drehe("links");
+        Greenfoot.delay(1);
+        move(2);
+        Greenfoot.delay(1);
+        drehe("links");
+        Greenfoot.delay(1);
+        move(1);
+        drehe("rechts");
+    }
+    else
+        nachricht("Hier ist kein Hügel!");
+    }
     
     /**
      * Der Rover gibt durch einen Wahrheitswert (true oder false )zurück, ob sich auf seiner Position ein Objekt der Klasse Gestein befindet.
