@@ -19,7 +19,4 @@ public class Planet extends World
         setPaintOrder(String.class, Rover.class, Marke.class, Gestein.class, Huegel.class);
         Greenfoot.setSpeed(20); 
     }
-
-  
-    
 }
