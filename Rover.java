@@ -83,7 +83,7 @@ public class Rover extends Actor
     }
 }
     /**
-     * Umfahre einen HÃ¼gel, wenn vorhanden.
+     * Umfahre einen Hügel, wenn vorhanden.
      */
     public void umfahreHügel() {   
     
@@ -107,12 +107,12 @@ public class Rover extends Actor
     }
 
     /**
-     * Dieses Programm umfährt automatisch jede bliebige Ding
+     * Dieses Programm umfährt automatisch jedes bliebige Ding.
      */
-    public void dingumfahren() {
-        int t;
-        t =5;
-        while(t <= 100) {
+    public void unkreiseObjekt() {
+        int z;
+        z=5;
+        while(z <= 100) {
   
         while(huegelVorhanden("rechts"))
        
