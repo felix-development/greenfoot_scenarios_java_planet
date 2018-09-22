@@ -107,7 +107,7 @@ public class Rover extends Actor
     }
 
     /**
-     * Dieses Programm umf√§hrt automatisch jede bliebige Ding
+     * Dieses Programm umf‰hrt automatisch jede bliebige Ding
      */
     public void dingumfahren() {
         int t;
