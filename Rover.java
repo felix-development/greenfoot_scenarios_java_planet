@@ -85,7 +85,7 @@ public class Rover extends Actor
     /**
      * Umfahre einen Hügel, wenn vorhanden.
      */
-    public void umfahreHügel() {   
+    public void umfahreH�gel() {   
     
     if(huegelVorhanden("vorne"))
     { 
@@ -103,25 +103,26 @@ public class Rover extends Actor
         drehe("rechts");
     }
     else
-        nachricht("Hier ist kein Hügel!");
+        nachricht("Hier ist kein H�gel!");
     }
+
     /**
- * Dieses Programm umfährt automatisch jede bliebige Ding
- */
-public void dingumfahren() 
-{
-    int t;
-    t =5;
-    while(t <= 100)
-    
-{
-    while(huegelVorhanden("rechts"))
-    { move(1);
+     * Dieses Programm umfährt automatisch jede bliebige Ding
+     */
+    public void dingumfahren() {
+        int t;
+        t =5;
+        while(t <= 100) {
+  
+        while(huegelVorhanden("rechts"))
+       
+        move(1);
         Greenfoot.delay(1);
+        drehe("rechts");
+        move(1);
+        }
     }
-drehe("rechts");
-move(1);
-}}
+
     
     /**
      * Der Rover gibt durch einen Wahrheitswert (true oder false )zurück, ob sich auf seiner Position ein Objekt der Klasse Gestein befindet.
