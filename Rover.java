@@ -132,7 +132,7 @@ public class Rover extends Actor
         loop=1;
         while(loop <= 100) {
         
-        // Fahrtrichtung Rechts
+        // Fahrtrichtung Links
         if (huegelVorhanden("links")) 
             do {
                 fahre();
@@ -143,7 +143,7 @@ public class Rover extends Actor
             fahre();
         }
         
-        // Fahrtrichtung Links
+        // Fahrtrichtung Rechts
         if (huegelVorhanden("rechts"))
             do {
                 fahre();
