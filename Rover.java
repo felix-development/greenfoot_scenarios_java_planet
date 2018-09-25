@@ -126,27 +126,34 @@ public class Rover extends Actor
     /**
      * Fahre vorwärts, wenn ein Hügel vorhanden ist.
      */
-    public void fahreWennHügelDaIst() {
+    public void quadratHügelTour() {
+
         int loop;
         loop=1;
         while(loop <= 100) {
-            
-        if(huegelVorhanden("links")) {
-            do {
-                fahre();              
-            } while(huegelVorhanden("links"));
-        }
         
-        if (huegelVorhanden("rechts")) {
+        // Fahrtrichtung Rechts
+        if (huegelVorhanden("links")) 
             do {
                 fahre();
-            } while(huegelVorhanden("rechts"));
-        }
-        {
-            drehe("links");
+                nachricht("IMPEACH TRUMP!");
+            } while(huegelVorhanden("links"));
+        else {
+            drehe("rechts"); // Hat Greenfoot eine Rechts/Links Schwäche?
             fahre();
-        }     
-    }
+        }
+        
+        // Fahrtrichtung Links
+        if (huegelVorhanden("rechts"))
+            do {
+                fahre();
+                nachricht("IMPEACH TRUMP!");
+            } while(huegelVorhanden("rechts"));
+        else {
+            drehe("links"); // Hat Greenfoot eine Rechts/Links Schwäche?
+            fahre();            
+        }
+    } 
 }
     
     /**
