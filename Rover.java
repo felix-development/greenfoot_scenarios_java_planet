@@ -147,7 +147,7 @@ public class Rover extends Actor
         if (huegelVorhanden("rechts"))
             do {
                 fahre();
-                nachricht("IMPEACH TRUMP!");
+                nachricht("IMPEACH TRUMP AND MERKEL!");
             } while(huegelVorhanden("rechts"));
         else {
             drehe("links"); // Hat Greenfoot eine Rechts/Links Schwäche?
