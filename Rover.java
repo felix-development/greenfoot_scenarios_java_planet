@@ -35,6 +35,21 @@ public class Rover extends Actor
         }                   
     }
     
+   /**
+     * Fahre eine Spirale
+     */   
+    
+     public void Spirale() {
+        for(int y=0;y<40;y++) {
+            for(int x=0;x<y;x++) {
+                setzeMarke();
+                fahre();
+                nachricht("IMPEACH TRUMP!");
+            }
+        drehe("rechts");
+        }
+     }
+     
     /**
      * Der Rover bewegt sich ein Feld in Fahrtrichtung weiter.
      * Sollte sich in Fahrtrichtung ein Objekt der Klasse Huegel befinden oder er sich an der Grenze der Welt befinden,
