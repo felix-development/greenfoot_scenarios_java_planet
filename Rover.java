@@ -9,7 +9,32 @@ public class Rover extends Actor
 
     } 
 
-
+   /**
+     * Dieser Algorithmus funktioniert nur mit der exakten Abbildung aus dem Buch! (siehe S.50)
+     */
+    
+    public void aufgabe3() { // Seite 50, Aufgabe 3b,c; a im Heft
+        int x=0;
+        
+        while(!markeVorhanden()) { // Teilaufgabe B
+                fahre();
+            if(gesteinVorhanden()) {
+                if((huegelVorhanden("links")) || (huegelVorhanden("rechts"))) {                
+                    analysiereGestein();
+                }    
+            }
+        x++;    
+        }
+        
+        if(markeVorhanden()) { // Teilaufgabe C
+            setRotation(getRotation()+180);
+            for(int y=x;y>0;y--) {
+                fahre();
+            }
+            setRotation(getRotation()+180);
+        }                   
+    }
+    
     /**
      * Der Rover bewegt sich ein Feld in Fahrtrichtung weiter.
      * Sollte sich in Fahrtrichtung ein Objekt der Klasse Huegel befinden oder er sich an der Grenze der Welt befinden,
